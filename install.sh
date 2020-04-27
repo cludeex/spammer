@@ -7,6 +7,7 @@ pip3 install requests
 pip3 install colorama
 cp ~/Spammer/spammer.py /data/data/com.termux/files/usr/bin/spammer
 dos2unix /data/data/com.termux/files/usr/bin/spammer
+cd $HOME && cd .. && cd usr && cd bin
 mv 'spammer'$'\r' spammer
 chmod 777 /data/data/com.termux/files/usr/bin/spammer
 spammer
