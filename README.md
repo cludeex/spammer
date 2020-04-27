@@ -5,6 +5,7 @@
 • <code>apt update && apt upgrade -y</code><br>
 • <code>pkg install python -y; pkg install git -y</code><br>
 • <code>git clone https://github.com/milkpro1337/Spammer</code><br>
+• <code>python ~/Spammer/install.py</code><br>
 • <code>spammer</code><br>
 
 <b>Установка на Windows - просто качаете [файл](https://github.com/milkpro1337/Spammer/blob/master/spammer.exe), и запускаете Spammer.exe<br>
