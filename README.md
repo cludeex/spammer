@@ -9,7 +9,7 @@
 • <code>python ~/Spammer/install.py</code><br>
 • <code>spammer</code><br>
 
-<b>Установка на Windows - просто качаете [файл](https://github.com/milkpro1337/Spammer/blob/master/spammer.exe), и запускаете Spammer.exe<br>
+<b>Установка на Windows - просто качаете [файл](https://github.com/milkpro1337/Spammer/blob/master/Spammer.exe), и запускаете Spammer.exe<br>
   
 # Лицензия
 <b>Проект распространяется под лицензией [Mozilla Public License 2.0](https://github.com/milkpro1337/Spammer/blob/master/LICENSE). Скачивая программное обеспечение из [этого](https://github.com/milkpro1337/Spammer) репозитория, вы соглашаетесь с ней.<br>
