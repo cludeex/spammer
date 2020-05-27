@@ -431,7 +431,7 @@ def main():
       except:
         pass
       try:
-        requests..post("https://bamper.by/registration/?step=1", data={"phone": "+" + _phone, "submit": "Запросить смс подтверждения", "rules": "on"})
+        requests.post("https://bamper.by/registration/?step=1", data={"phone": "+" + _phone, "submit": "Запросить смс подтверждения", "rules": "on"})
       except:
         pass
       try:
