@@ -1,8 +1,9 @@
 #!/bin/bash
 pkg install python
-pkg install python3
-pkg install python3-pip
-pip3 install requests
-pip3 install colorama
 pkg install dos2unix
-python ~/Spammer/setup.py
+pip install requests
+cp ~/Spammer/spammer.py /data/data/com.termux/files/usr/bin/spammer
+dos2unix /data/data/com.termux/files/usr/bin/spammer
+chmod -R 777 ~/spammer
+chmod 777 /data/data/com.termux/files/usr/bin/spammer
+spammer
