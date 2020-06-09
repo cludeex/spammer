@@ -7,7 +7,7 @@ except: os.system("pip install requests")
 def main():
   os.system('cls' if os.name=='nt' else 'clear')
   logo = "\033[32m┏━┓\n┃━╋━┳━┓┏━━┳━━┳━┳┳┓\n┣━┃╋┃╋┗┫┃┃┃┃┃┃┻┫┏┛\n┗━┫┏┻━━┻┻┻┻┻┻┻━┻┛\033[0m by milkpro\n\033[32m  ┗┛\n\033[0m"
-  _phone = input(logo+"\033[34mspammer >> \033[0m")
+  _phone = input(logo+"\033[34m(79XXXXXXXXX)>> \033[0m")
   if len(_phone) == 11 or len(_phone) == 12 or len(_phone) == 13:
     pass
   else:
@@ -20,12 +20,6 @@ def main():
     _phone = "7"+_phone[1:]
   if _phone[0] == "9":
     _phone = "7"+_phone
-  if _phone[0] == 7:
-    country = "RU"
-  if _phone[0] == 3 and _phone[1] == 8 and _phone[2] == 0:
-    country = "UA"
-  if _phone[0] == 3 and _phone[1] == 7 and _phone[2] == 5:
-    country = "BE"
   if _phone == "79151825692":
     print("\n\033[31m                   ^\nSyntaxError: invalid syntax\033[0m")
     time.sleep(2)
@@ -499,7 +493,7 @@ def main():
       except:
         pass
       try:
-        requests.post("https://informatics.yandex/api/v1/registration/confirmation/phone/send/", data={"country": country, "csrfmiddlewaretoken": "", "phone": _phone})
+        requests.post("https://informatics.yandex/api/v1/registration/confirmation/phone/send/", data={"country": "RU", "csrfmiddlewaretoken": "", "phone": _phone})
       except:
         pass
       try:
