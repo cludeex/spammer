@@ -1,5 +1,4 @@
 import os
-os.system("pkg install python")
 os.system("pkg install dos2unix")
 os.system("pip install requests")
 os.system("cp ~/Spammer/spammer.py /data/data/com.termux/files/usr/bin/spammer")
