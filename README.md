@@ -5,11 +5,11 @@
 • <code>apt update && apt upgrade -y</code><br>
 • <code>pkg install python -y</code><br>
 • <code>pkg install git -y</code><br>
-• <code>git clone https://github.com/milkpro1337/Spammer</code><br>
+• <code>git clone https://github.com/clud1x/Spammer</code><br>
 • <code>sh ~/Spammer/install.sh</code><br>
 • <code>spammer</code><br>
 
 <b>Установка на Windows - просто качаете [файл](https://github.com/milkpro1337/Spammer/blob/master/Spammer.exe), и запускаете Spammer.exe<br>
   
 # Лицензия
-<b>Проект распространяется под лицензией [Mozilla Public License 2.0](https://github.com/milkpro1337/Spammer/blob/master/LICENSE). Скачивая программное обеспечение из [этого](https://github.com/milkpro1337/Spammer) репозитория, вы соглашаетесь с ней.<br>
+<b>Проект распространяется под лицензией [Mozilla Public License 2.0](https://github.com/clud1x/Spammer/blob/master/LICENSE). Скачивая программное обеспечение из [этого](https://github.com/clud1x/Spammer) репозитория, вы соглашаетесь с ней.<br>
