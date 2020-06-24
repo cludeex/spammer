@@ -6,7 +6,7 @@ try: import requests
 except: os.system("pip install requests")
 def main():
   os.system('cls' if os.name=='nt' else 'clear')
-  logo = "\033[32m┏━┓\n┃━╋━┳━┓┏━━┳━━┳━┳┳┓\n┣━┃╋┃╋┗┫┃┃┃┃┃┃┻┫┏┛\n┗━┫┏┻━━┻┻┻┻┻┻┻━┻┛\033[0m by milkpro\n\033[32m  ┗┛\n\033[0m"
+  logo = "\033[32m┏━┓\n┃━╋━┳━┓┏━━┳━━┳━┳┳┓\n┣━┃╋┃╋┗┫┃┃┃┃┃┃┻┫┏┛\n┗━┫┏┻━━┻┻┻┻┻┻┻━┻┛\033[0m by clud1x\n\033[32m  ┗┛\n\033[0m"
   _phone = input(logo+"\033[34m(79XXXXXXXXX)>> \033[0m")
   if len(_phone) == 11 or len(_phone) == 12 or len(_phone) == 13:
     pass
