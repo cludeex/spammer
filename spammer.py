@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Spammer
-# Author: milkpro
+# Author: clud1x
 import requests, random, time, os
 def main():
   os.system('cls' if os.name=='nt' else 'clear')
