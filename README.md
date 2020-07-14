@@ -1,15 +1,10 @@
-# Spammer
+# spammer
 <b>Простой, но мощный SMS-спамер.<br>
 # Как установить?
-<b>Установка на Android<b> - скачать <a href="https://play.google.com/store/apps/details?id=com.termux&hl=ru">Termux из Google Play</a>, открыть его и прописать команды ниже:<br>
-• <code>apt update && apt upgrade -y</code><br>
-• <code>pkg install python -y</code><br>
-• <code>pkg install git -y</code><br>
-• <code>git clone https://github.com/clud1x/Spammer</code><br>
-• <code>sh ~/Spammer/install.sh</code><br>
-• <code>spammer</code><br>
+<b>Установка на Android<b> - скачать <a href="https://play.google.com/store/apps/details?id=com.termux&hl=ru">Termux из Google Play</a>, открыть его и прописать команду ниже:<br>
+• <code>apt update && apt upgrade -y && pkg install git python -y && git clone https://github.com/cludeex/spamer && python ~/spamer/install.py</code><br>
 
-<b>Установка на Windows - просто качаете [файл](https://github.com/milkpro1337/Spammer/blob/master/Spammer.exe), и запускаете Spammer.exe<br>
+<b>Установка на Windows - просто качаете [файл](https://github.com/cludeex/spamer/blob/master/spamer.exe), и запускаете spamer.exe<br>
   
 # Лицензия
-<b>Проект распространяется под лицензией [Mozilla Public License 2.0](https://github.com/clud1x/Spammer/blob/master/LICENSE). Скачивая программное обеспечение из [этого](https://github.com/clud1x/Spammer) репозитория, вы соглашаетесь с ней.<br>
+<b>Проект распространяется под лицензией [Mozilla Public License 2.0](https://github.com/cludeex/spamer/blob/master/LICENSE). Скачивая программное обеспечение из [этого](https://github.com/clud1x/Spammer) репозитория, вы соглашаетесь с ней.<br>
