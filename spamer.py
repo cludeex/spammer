@@ -19,6 +19,7 @@ def main():
   try:
     urllib.request.urlopen("http://google.com", timeout=1)
   except urllib.request.URLError:
+    clear()
     logo4()
     print("\033[31m[!] Нет интернет соединения :(\033[0m")
     sleep(2)
