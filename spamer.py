@@ -14,6 +14,8 @@ def sleep(t1me):
   time.sleep(t1me)
 def main():
   clear()
+  logo()
+  _phone = input("\033[34m(79XXXXXXXXX)>> \033[0m")
   try:
     urllib.request.urlopen("http://google.com", timeout=1)
   except urllib.request.URLError:
@@ -21,8 +23,6 @@ def main():
     print("\033[31m[!] Нет интернет соединения :(\033[0m")
     sleep(2)
     main()
-  logo()
-  _phone = input("\033[34m(79XXXXXXXXX)>> \033[0m")
   if (len(_phone) == 11 and (_phone[0] == "7" or _phone[0] == "8")) or (len(_phone) == 12 and _phone[0] == "+"):
     pass
   else:
