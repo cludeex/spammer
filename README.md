@@ -1,4 +1,4 @@
-# spammer
+# Spamer
 <b>Простой, но мощный SMS-спамер.<br>
 # Как установить?
 <b>Установка на Android<b> - скачать <a href="https://play.google.com/store/apps/details?id=com.termux&hl=ru">Termux из Google Play</a>, открыть его и прописать команду ниже:<br>
