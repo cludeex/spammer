@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-# spamer v2.0
+# spammer v2.0
 # author: cludeex
 import os, random, time, urllib
 try: import requests
 except: os.system("python -m pip install requests; spamer")
 def logo(num):
   os.system('cls' if os.name=='nt' else 'clear')
-  print("\033[32m┏━┓\n┃━╋━┳━┓┏━━┳━┳┳┓\n┣━┃╋┃╋┗┫┃┃┃┻┫┏┛\n┗━┫┏┻━━┻┻┻┻━┻┛ \033[3"+str(num)+"mby cludeex\n\033[32m  ┗┛\033[0m")
+  print("\033[32m┏━┓\n┃━╋━┳━┓┏━━┳━━┳━┳┳┓\n┣━┃╋┃╋┗┫┃┃┃┃┃┃┻┫┏┛\n┗━┫┏┻━━┻┻┻┻┻┻┻━┻┛\033[3"+str(num)+"m by cludeex\n\033[32m  ┗┛\033[0m")
 def main(t1me):
   time.sleep(t1me)
   logo(1)
