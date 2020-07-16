@@ -21,7 +21,7 @@ def logo():
 def main(t):
   time.sleep(t)
   logo()
-  _phone = input(clr.blt+clr.bl+"79XXXXXXXXX "+clr.mg+">>> "+clr.bl)
+  _phone = input(clr.blt+clr.bl+"79XXXXXXXXX "+clr.mg+">>> "+clr.end)
   try:
     urllib.request.urlopen("http://google.com", timeout=1)
   except urllib.request.URLError:
