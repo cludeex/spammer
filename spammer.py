@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# spammer v2.0
+# spammer v2.1
 # author: cludeex
 import os, random, time, urllib
 try: import requests
