@@ -4,17 +4,6 @@
 import os, random, time, urllib
 try: import requests
 except: os.system("python -m pip install requests; spamer")
-class clr:
-  rd = '\033[91m'
-  gn = '\033[92m'
-  yl = '\033[93m'
-  bl = '\033[94m'
-  mg = '\033[95m'
-  cn = '\033[96m'
-  wh = '\033[97m'
-  gr = '\033[90m'
-  blt = '\033[1m'
-  end = '\033[0m'
 def logo():
   os.system('cls' if os.name=='nt' else 'clear')
   print(clr.blt+clr.mg+"┏━┓\n┃━╋━┳━┓┏━━┳━━┳━┳┳┓\n"+clr.bl+"┣━┃╋┃╋┗┫┃┃┃┃┃┃┻┫┏┛\n┗━┫┏┻━━┻┻┻┻┻┻┻━┻┛ "+clr.gr+"by cludeex\n"+clr.bl+"  ┗┛"+clr.end)
@@ -495,4 +484,15 @@ def main(t):
         pass
     except:
       pass
+class clr:
+  rd = '\033[91m'
+  gn = '\033[92m'
+  yl = '\033[93m'
+  bl = '\033[94m'
+  mg = '\033[95m'
+  cn = '\033[96m'
+  wh = '\033[97m'
+  gr = '\033[90m'
+  blt = '\033[1m'
+  end = '\033[0m'
 main(0)
