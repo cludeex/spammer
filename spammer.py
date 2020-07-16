@@ -495,4 +495,5 @@ class clr:
   gr = '\033[90m'
   blt = '\033[1m'
   end = '\033[0m'
-main(0)
+if __name__ == "__main__":
+  main(0)
