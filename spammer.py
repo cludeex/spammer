@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # spammer v3.0
-# Author: cludeex
+# author: cludeex
 import os, random, time, urllib
 try: import requests
 except: os.system("python -m pip install requests; spamer")
