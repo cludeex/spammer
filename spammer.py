@@ -11,6 +11,7 @@ def update():
     logo()
     up = input(clr.bl+clr.blt+"Вы уверены, что хотите обновить? "+clr.end+"(y/n) ")
     if up == "y":
+        os.system('cls' if os.name=='nt' else 'clear')
         os.system("cd && rm -rf ~/spammer && git clone https://github.com/cludeex/spammer && python ~/spammer/install.py")
         exit()
     else:
