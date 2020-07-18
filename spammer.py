@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # spammer v2.2
 # author: cludeex
-import os, random, time, urllib
+import os, random, time
 try: import requests
 except: os.system("python -m pip install requests; spamer")
 def logo():
@@ -11,12 +11,6 @@ def main(t):
   time.sleep(t)
   logo()
   _phone = input(clr.blt+clr.bl+"XXXXXXXXX "+clr.mg+">>> "+clr.end)
-  try:
-    urllib.request.urlopen("http://google.com", timeout=1)
-  except urllib.request.URLError:
-    logo()
-    print(clr.blt+clr.rd+"[!] Нет интернет соединения :("+clr.end)
-    main(2)
   if len(_phone) == 11 or len(_phone) == 12 or len(_phone) == 13:
     pass
   else:
