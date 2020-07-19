@@ -8,19 +8,18 @@ def logo():
     os.system('cls' if os.name=='nt' else 'clear')
     print(clr.blt+clr.gn+"  ___ ___  _   __  __ __  __ ___ ___\n / __| _ \\/_\\ |  \\/  |  \\/  | __| _ \\\n \\__ \\  _/ _ \\| |\\/| | |\\/| | _||   /\n |___/_|/_/ \\_\\_|  |_|_|  |_|___|_|_\\"+"\n\n    SMS Bomber: github.com/cludeex\n"+clr.end)
 def update():
-    logo()
-    up = input(clr.bl+clr.blt+"Вы уверены, что хотите обновить? "+clr.end+"(y/n) ")
+    up = input("Вы уверены, что хотите обновить? (y/n) ")
     if up == "y":
         os.system('cls' if os.name=='nt' else 'clear')
         os.system("cd && rm -rf ~/spammer && git clone https://github.com/cludeex/spammer && python ~/spammer/install.py")
         exit()
     else:
-        print(clr.blt+"\nОтменено")
+        print("Отменено")
         main(2)
 def main(t):
     time.sleep(t)
     logo()
-    print("[1] СМС спамер.\n[2] Обновить спамер.\n[3] Выход.\n")
+    print("[1] СМС СПАМЕР\n[2] ОБНОВИТЬ СПАМЕР.\n[3] ВЫХОД.\n")
     input1 = input(clr.bl+clr.blt+"Введите номер пункта: "+clr.end)
     try:
         requests.get("http://google.com", verify=True)
