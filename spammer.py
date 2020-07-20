@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-# spammer v3.0
+# spammer v3.1
 # author: cludeex
-import os, random, time, urllib
+import os, random, time
 try: import requests
 except: os.system("python -m pip install requests; spamer")
 def logo():
@@ -10,7 +10,6 @@ def logo():
 def update():
     up = input("Вы уверены, что хотите обновить? (y/n) ")
     if up == "y":
-        os.system('cls' if os.name=='nt' else 'clear')
         os.system("cd && rm -rf ~/spammer && git clone https://github.com/cludeex/spammer && python ~/spammer/install.py")
         exit()
     else:
