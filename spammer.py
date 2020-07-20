@@ -53,7 +53,7 @@ def main(t):
         _email = _name+"@gmail.com"
         email = _email
         logo()
-        print("Телефон: "+clr.bl+clr.blt+_phone+clr.end+"\nСпамер запущен.\nЧтобы остановить спам - нажми Ctrl + Z")
+        print("Телефон: "+clr.bl+clr.blt+_phone+clr.end+"\nСпамер запущен.\nЧтобы остановить - нажми Ctrl + Z")
         while True:
             if _phone[0] == "7":
                 try:
