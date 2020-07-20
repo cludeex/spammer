@@ -28,7 +28,7 @@ def main(t):
         main(2)
     if input1 == "1":
         logo()
-        _phone = input(clr.bl+clr.blt+"Введите номер: "+clr.end)
+        _phone = input(clr.bl+clr.blt+"Введите номер телефона: "+clr.end)
         if _phone == "":
            main(0)
         if len(_phone) == 11 or len(_phone) == 12 or len(_phone) == 13:
@@ -52,7 +52,7 @@ def main(t):
         _email = _name+"@gmail.com"
         email = _email
         logo()
-        print("Телефон: "+clr.bl+clr.blt+_phone+clr.end+"\nСпамер запущен.\nЧтобы остановить - нажми Ctrl + Z")
+        print("Телефон: "+clr.bl+clr.blt+_phone+clr.end+"\nСпамер запущен.\nЧтобы остановить - нажмите Ctrl + Z")
         while True:
             if _phone[0] == "7":
                 try:
