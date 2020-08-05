@@ -25,7 +25,9 @@ def update():
 def main(t):
     time.sleep(t)
     logo()
-    print("[A] СМС СПАМЕР\n[B] ОБНОВИТЬ СПАМЕР.\n[Q] ВЫХОД.\n")
+    print("[A] СМС СПАМЕР.")
+    print("[B] ОБНОВИТЬ СПАМЕР.")
+    print("[Q] ВЫХОД.\n")
     input1 = input(color.BOLD+color.BLUE+"Введите номер пункта: "+color.END)
     try:
         requests.get("http://google.com", verify=True)
