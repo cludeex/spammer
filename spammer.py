@@ -13,7 +13,7 @@ except:
         exit()
 def logo():
     os.system('cls' if os.name=='nt' else 'clear')
-    print(color.BOLD+color.GREEN+"  ___ ___  _   __  __ __  __ ___ ___\n / __| _ \\/_\\ |  \\/  |  \\/  | __| _ \\\n \\__ \\  _/ _ \\| |\\/| | |\\/| | _||   /\n |___/_|/_/ \\_\\_|  |_|_|  |_|___|_|_\\"+"\n\n     Spammer: github.com/cludeex\n"+color.END)
+    print(color.BOLD+color.GREEN+"  ___ ___  _   __  __ __  __ ___ ___\n / __| _ \\/_\\ |  \\/  |  \\/  | __| _ \\\n \\__ \\  _/ _ \\| |\\/| | |\\/| | _||   /\n |___/_|/_/ \\_\\_|  |_|_|  |_|___|_|_\\\n\n     Spammer: github.com/cludeex\n"+color.END)
 def update():
     logo()
     up = input(color.BOLD+color.BLUE+"Вы уверены, что хотите обновить? "+color.END+"(y/n) ")
@@ -25,9 +25,9 @@ def update():
 def main(t):
     time.sleep(t)
     logo()
-    print("[A] СМС СПАМЕР.")
-    print("[B] ОБНОВИТЬ СПАМЕР.")
-    print("[Q] ВЫХОД.\n")
+    print("[1] СМС СПАМЕР.")
+    print("[2] ОБНОВИТЬ СПАМЕР.")
+    print("[3] ВЫХОД.\n")
     input1 = input(color.BOLD+color.BLUE+"Введите номер пункта: "+color.END)
     try:
         requests.get("http://google.com", verify=True)
@@ -35,7 +35,7 @@ def main(t):
         logo()
         print(color.BOLD+color.RED+"[!] Нет интернет соединения.")
         main(2)
-    if input1.lower() == "a":
+    if input1 == "1":
         logo()
         _phone = input(color.BOLD+color.BLUE+"Введите номер телефона: "+color.END)
         if _phone == "":
@@ -657,9 +657,9 @@ def main(t):
                     requests.post('https://3040.com.ua/taxi-ordering', data={"callback-phone": _phone})
                 except:
                     pass
-    elif input1.lower() == "b":
+    elif input1 == "2":
         update()
-    elif input1.lower() == "q":
+    elif input1 == "3":
        logo()
        print(color.BOLD+color.BLUE+"До скорой встречи!\n"+color.END)
        exit()
