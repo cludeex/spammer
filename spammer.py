@@ -20,7 +20,7 @@ def update():
     if up == "y":
         os.system("rm -rf spammer && git clone https://github.com/cludeex/spammer && python ~/spammer/install.py")
     else:
-        print(color.RED+"Отменено"+color.END)
+        print("Отменено")
         main(2)
 def main(t):
     time.sleep(t)
