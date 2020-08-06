@@ -657,6 +657,10 @@ def main(t):
                     requests.post('https://3040.com.ua/taxi-ordering', data={"callback-phone": _phone})
                 except:
                     pass
+            else:
+                logo()
+                print(color.BOLD+color.RED+"[!] Неправильный номер.")
+                main(2)
     elif input1 == "2":
         update()
     elif input1 == "3":
