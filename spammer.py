@@ -710,7 +710,7 @@ def main(t):
 		logo()
 		update = input(Style.BRIGHT+Fore.BLUE+"Вы уверены, что хотите обновить? "+Style.RESET_ALL+"(y/n) ")
 		if update == "y":
-			os.system("cd && rm -rf ~/spymer && git clone https://github.com/cludeex/spammer && python ~/spammer/install.py")
+			os.system("cd && rm -rf ~/spammer && git clone https://github.com/cludeex/spammer && python ~/spammer/install.py")
 			exit()
 		else:
 			logo()
