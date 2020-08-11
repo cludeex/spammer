@@ -714,11 +714,11 @@ def main(t):
 			exit()
 		else:
 			logo()
-			print(Style.BRIGHT+Fore.RED+"[!] Отменено")
+			print(Style.BRIGHT+Fore.RED+"[!] Отменено"+Style.RESET_ALL)
 			main(1)
 	elif input1 == "3":
 		logo()
-		print(Style.BRIGHT+Fore.BLUE+"До скорой встречи!"+Style.RESET_ALL)
+		print(Style.BRIGHT+Fore.BLUE+"До скорой встречи!\n"+Style.RESET_ALL)
 		exit()
 	else:
 		logo()
