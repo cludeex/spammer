@@ -2,9 +2,7 @@
 [![Build Status](https://img.shields.io/github/forks/cludeex/spammer.svg)](https://github.com/cludeex/spammer)
 [![License](https://img.shields.io/github/license/cludeex/spammer.svg)](https://github.com/cludeex/spammer)
 # Установка
-$ `git clone https://github.com/cludeex/spammer`<br>
-$ `cd spammer`<br>
-$ `sh install.sh`<br>
+$ `bash <(curl -L git.io/spammer)`<br>
 # Запуск
 $ `spammer`<br>
 # Лицензия
