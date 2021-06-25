@@ -27,9 +27,9 @@ elif [ $distro == termux ]; then
     bin="$PREFIX/bin"
     python="python"
     sudo=""
-elif [ $distro == fedora || $distro == redhat]; then
+elif [ $distro == fedora ] || [ $distro == redhat ]; then
     install="yum -y install"
-elif [ $distro == SuSE || $distro == sles]; then 
+elif [ $distro == SuSE ] || [ $distro == sles ]; then 
     install="zypper -n install"
 elif [ $distro == darwin ]; then 
     install="brew install"
