@@ -11,6 +11,8 @@ fi
 if [ -z $distro ]; then
     if [ -f /etc/os-release ]; then
         distro=$(source /etc/os-release && echo $ID)
+    else
+        exit
     fi
 fi
 bin="/usr/bin"
