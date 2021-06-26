@@ -11,8 +11,6 @@ fi
 if [ -z $distro ]; then
     if [ -f /etc/os-release ]; then
         distro=$(source /etc/os-release && echo $ID)
-    else
-        exit
     fi
 fi
 bin="/usr/bin"
@@ -39,6 +37,8 @@ elif [ $distro == darwin ]; then
 elif [ $distro == alpine ]; then 
     install="apk add"
     sudo=""
+else
+    exit
 fi
 $sudo $install $python $python-pip git
 git clone https://github.com/cludeex/spammer
