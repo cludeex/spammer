@@ -36,7 +36,7 @@ elif [ $distro = alpine ]; then
     sudo=""
     pip="py3-pip"
 fi
-if [ -z $pip ] && [ $distro = termux ] ; then
+if [ -z $pip ] && [ $distro != termux ]; then
     pip=$python-pip
 fi
 $sudo $install git $python $pip
