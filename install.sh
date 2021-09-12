@@ -39,10 +39,10 @@ fi
 if [ -z $pip ]; then
     pip=$python-pip
 fi
-echo $sudo $install git $python $pip
-#git clone https://github.com/cludeex/spammer
-echo $python -m pip install -r spammer/requirements.txt
-echo $sudo cp spammer/spammer.py $bin/spammer
-echo $sudo chmod +x $bin/spammer
-echo $sudo rm -rf spammer
-#spammer
+$sudo $install git $python $pip
+git clone https://github.com/cludeex/spammer
+$python -m pip install -r spammer/requirements.txt
+$sudo cp spammer/spammer.py $bin/spammer
+$sudo chmod +x $bin/spammer
+$sudo rm -rf spammer
+spammer
