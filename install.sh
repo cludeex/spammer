@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 clear
-if [ $OSTYPE = linux-android* ]; then
+if [ -d /data/data/com.termux/files/usr/ ]; then
     distro=termux
-elif [ $OSTYPE = darwin ]; then
+elif [ -e  /usr/local/bin/brew ]; then
     distro=darwin
 else
-    distro=$(ls /etc | awk 'match($0, "(.+?)[-_](?:release|version)", groups) {if(groups[1] != "os") {print groups[1]}}')
+    distro=$(ls /etc | awk "match($0, '(.+?)[-_](?:release|version)', groups) {if(groups[1] != 'os') {print groups[1]}}")
     if [ -z $distro ]; then
         distro=$(source /etc/os-release && echo $ID)
     fi
