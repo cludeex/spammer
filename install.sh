@@ -22,7 +22,6 @@ elif [ $distro = ubuntu ]; then
 elif [ $distro = termux ]; then
     install="apt -y install"
     bin="$PREFIX/bin"
-    python="python"
     sudo=""
 elif [ $distro = fedora ] || [ $distro = redhat ]; then
     install="yum -y install"
